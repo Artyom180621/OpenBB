@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "ask": [
+      "mcp__ibkr__place_stock_order",
+      "mcp__ibkr__cancel_order_by_id",
+      "mcp__ibkr__close_position"
+    ],
+    "deny": [
+      "Bash(*IBKR_ALLOW_LIVE*)",
+      "Edit(.mcp.json)",
+      "Write(.mcp.json)"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "openbb": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--no-project",
+        "openbb-mcp",
+        "--transport",
+        "stdio"
+      ],
+      "env": {
+        "OPENBB_DAYTRADER_WORKDIR": "${OPENBB_DAYTRADER_WORKDIR:-.}"
+      }
+    },
+    "ibkr": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--no-project",
+        "openbb-ibkr-mcp"
+      ],
+      "env": {
+        "IBKR_MODE": "${IBKR_MODE:-paper}",
+        "IBKR_PORT": "${IBKR_PORT:-}",
+        "IBKR_ALLOW_LIVE": "${IBKR_ALLOW_LIVE:-}",
+        "IBKR_ACCOUNT": "${IBKR_ACCOUNT:-}",
+        "IBKR_MAX_ORDER_USD": "${IBKR_MAX_ORDER_USD:-}"
+      }
+    }
+  }
+}
